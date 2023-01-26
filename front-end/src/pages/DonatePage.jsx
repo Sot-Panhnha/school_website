@@ -1,13 +1,14 @@
-import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import useFetch from "../hooks/useFetch";
 
-const DonatePage = () => {
+function DonatePage() {
+    const {data, loading, error} = useFetch('http://localhost:1337/api/blogs')
+    if(loading)return<p>loading...</p>
+    if(error)return<p>{error}</p>
+    console.log(data)
     return(
         <>
-            <Navbar/>
-              <h1>DonatePage</h1>
-            <Footer/>
         </>
     )
 }

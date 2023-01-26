@@ -23,8 +23,7 @@ const BlogPageLayout = () => {
                   <RecentPost />
                   <FollowUs />
               </div>
-            </div>
-           
+            </div> 
           </div>
         </div>
       </div>
